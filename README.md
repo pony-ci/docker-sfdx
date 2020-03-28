@@ -12,5 +12,5 @@ Run sfdx commands in docker.
 * git
 
 ### Verify version
-`docker run --rm pony/sfdx sfdx version`
+`docker run --rm ponyci/sfdx sfdx version`
 
