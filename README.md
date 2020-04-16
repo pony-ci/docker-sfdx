@@ -6,10 +6,12 @@
 Run sfdx commands in docker.
 
 ### What's in this image
-* ubuntu
 * sfdx-cli
+* nodejs
 * jq
 * git
+* wget
+* curl
 
 ### Verify version
 `docker run --rm ponyci/sfdx sfdx version`

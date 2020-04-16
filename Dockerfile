@@ -1,4 +1,4 @@
-FROM ubuntu:19.04
+FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y \
   wget \
@@ -11,9 +11,8 @@ RUN mkdir /sfdx \
     && /sfdx/install \
     && rm -rf /sfdx
 
-RUN apt-get update
-RUN apt-get -y install jq
-RUN apt-get -y install git
+RUN apt-get update && apt-get install -y wget curl jq git nodejs \
+   && rm -rf /var/lib/apt/lists/*
 
 ARG CACHEBUST=1
 RUN sfdx update
